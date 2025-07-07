@@ -1,0 +1,8 @@
+.filled {
+    fill: var(--primary);
+}
+
+.star {
+    stroke: var(--primary);
+    cursor: pointer;
+}

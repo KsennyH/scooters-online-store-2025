@@ -1,0 +1,17 @@
+.header {
+    background-color: var(--secondary);
+    color: var(--white);
+    min-height: 40px;
+    padding: 10px 0;
+}
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+.navigationList {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+}

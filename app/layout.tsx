@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
+import { Header } from "./components/header/Header";
+import { HeaderActions } from "./components/header-actions/HeaderActions";
 
 const inter = Inter({
   subsets: ['latin', 'cyrillic'],
@@ -28,6 +30,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${montserrat.variable}`}>
+        <Header />
+        <HeaderActions />
         {children}
       </body>
     </html>

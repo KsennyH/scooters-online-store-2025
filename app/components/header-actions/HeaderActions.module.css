@@ -1,0 +1,24 @@
+.headerActions {
+    background-color: var(--background);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    padding: 24px 0;
+}
+.actions {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    column-gap: 24px;
+}
+.phone {
+    white-space: nowrap;
+}
+.border {
+    height: 30px;
+    width: 1px;
+    background: black;
+}
+.icons {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}

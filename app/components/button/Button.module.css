@@ -25,3 +25,8 @@
 .secondary:hover {
     background-color: #465970;
 }
+.icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}

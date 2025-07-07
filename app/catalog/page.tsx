@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { Title } from "../components/title/Title"
 import { Button } from "../components/button/Button"
+import { Rating } from "../components/rating/Rating"
 
 export const metadata: Metadata = {
   title: "Каталог товаров"
@@ -15,6 +16,7 @@ export default function CatalogPage() {
       <Title level="h4">Моноколёса</Title>
       <Button view="primary">Кнопка</Button>
       <Button view="secondary">Кнопка</Button>
+      <Rating rating={4}></Rating>
     </main>
   )
 }
