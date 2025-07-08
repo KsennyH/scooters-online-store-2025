@@ -1,0 +1,79 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    background-color: var(--white);
+    box-shadow: 0px 2px 10px rgba(50, 50, 71, 0.14);
+    border-radius: 10px;
+    padding: 12px;
+    transition: all 0.2s ease-in;
+}
+
+.card:hover {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+.card:hover .icons path, .card:hover .icons ellipse {
+    stroke: var(--primary);
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.cardImage {
+    text-align: center;
+}
+
+.cardTitle {
+        text-align: center;
+    }
+
+.reviews {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.reviewText {
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.priceWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.price {
+    font-weight: 700;
+}
+
+.priceSymbol {
+    margin-left: 5px;
+}
+
+.new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 70px;
+    font-size: 14px;
+    border-radius: 10px;
+    height: 24px;
+    background-color: #E93232;
+    color: var(--white);
+    position: absolute;
+    left: 0;
+}

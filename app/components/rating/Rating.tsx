@@ -1,6 +1,6 @@
 'use client'
 import { JSX, useEffect, useState } from "react";
-import RatingStarIcon from './RatingStarIcon.svg';
+import RatingStarSmall from './RatingStarSmall.svg';
 import styles from './Rating.module.css';
 import cn from 'classNames';
 import { RatingProps } from "./RatingProps";
@@ -14,7 +14,7 @@ export const Rating = ({rating, ...props}: RatingProps): JSX.Element => {
 
     const calculateRating = (currentRating: number) => {
         const updatedArrayStars = new Array(5).fill(<></>).map((_, i: number ) => {
-            return <RatingStarIcon className={cn(styles.star, {
+            return <RatingStarSmall className={cn(styles.star, {
                 [styles.filled]: i < currentRating
             })} />
         });

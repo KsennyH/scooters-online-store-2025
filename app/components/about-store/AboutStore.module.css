@@ -1,0 +1,11 @@
+.aboutSection {
+    padding: 48px 0;
+}
+
+.aboutTitle {
+    margin-bottom: 24px;
+}
+
+.about p:not(:last-child) {
+    margin-bottom: 12px;
+}

@@ -1,7 +1,6 @@
 .header {
     background-color: var(--secondary);
     color: var(--white);
-    min-height: 40px;
     padding: 10px 0;
 }
 .navigation {

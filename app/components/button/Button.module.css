@@ -1,7 +1,7 @@
 .button {
     display: inline-block;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--white);
     border-radius: 10px;
     border: none;

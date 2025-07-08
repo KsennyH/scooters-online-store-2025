@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import { Header } from "./components/header/Header";
-import { HeaderActions } from "./components/header-actions/HeaderActions";
+import { Footer } from "./components/footer/Footer";
 
 const inter = Inter({
   subsets: ['latin', 'cyrillic'],
@@ -28,11 +28,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ru">
       <body className={`${inter.variable} ${montserrat.variable}`}>
-        <Header />
-        <HeaderActions />
-        {children}
+        <div className="wrapper">
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
