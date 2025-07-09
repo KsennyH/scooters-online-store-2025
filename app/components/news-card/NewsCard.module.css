@@ -27,6 +27,13 @@
     font-size: 12px;
     font-weight: 600;
 }
+.cardText {
+    display: -webkit-box;
+    line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 .data {
     color: var(--text);
 }
