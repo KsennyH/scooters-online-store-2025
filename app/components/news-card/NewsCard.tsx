@@ -24,7 +24,7 @@ export const NewsCard = ({...obj}: NewsCardProps): JSX.Element => {
                 <Title level="h4" className={styles.cardTitle}>{obj.title}</Title>
                 <p className={styles.cardText}>{obj.content}</p>
                 <div className={styles.dataWrapper}>
-                <span className={styles.data}>{obj.createdAt}</span>
+                <span className={styles.data}>{new Date(Date.parse(obj.createdAt)).toLocaleDateString("ru-Ru")}</span>
                 <Link className={styles.link} href="#">Читать полностью</Link>
                 </div>
             </div>
