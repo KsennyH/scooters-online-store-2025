@@ -19,9 +19,7 @@ export const HeaderActions = (): JSX.Element => {
                 </div>
                 <div className="col-4">
                     <div className="container">
-                        <div>
-                            <SearchForm />
-                        </div>
+                        <SearchForm />
                     </div>
                 </div>
                 <div className="col-4">

@@ -1,3 +1,6 @@
+.formWrapper {
+    position: relative;
+}
 .form {
     position: relative;
 }
@@ -24,4 +27,26 @@
     right: 0;
     top: 0;
     height: 100%;
+}
+
+.searchResult {
+    position: absolute;
+    border: 1px solid var(--secondary);
+    border-radius: 10px;
+    background-color: var(--white);
+    width: 100%;
+    color: var(--secondary);
+    font-weight: 700;
+    font-size: 12px;
+    padding: 12px;
+    opacity: 0;
+    visibility: hidden;
+    top: 120%;
+    transition: all 0.5s ease-in;
+}
+
+.open {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
 }
