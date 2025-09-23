@@ -1,7 +1,7 @@
 import { JSX } from 'react';
 import styles from './Title.module.css';
 import TitleProps from './TitleProps';
-import cn from "classNames";
+import cn from "classnames";
 
 export const Title = ({level, children, className, ...props}: TitleProps): JSX.Element => {
     return(
