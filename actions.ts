@@ -4,8 +4,8 @@ import { OrderStatus } from "@prisma/client";
 import { cookies } from 'next/headers';
 import { prisma } from "./prisma/prisma-client";
 import { InputsData } from "./app/components/checkout-form/CheckoutForm";
-import { sendEmail } from "./app/api/send/route";
 import { createPayment } from "./app/lib/cart/createPayment";
+import { sendEmail } from "./app/lib/sendEmail";
 
 export async function makeOrder (formData: InputsData) {
     try{
