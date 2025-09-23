@@ -10,6 +10,7 @@ export default function Cart(): JSX.Element {
 
     const {items, totalAmount, loading, fetchCart} = useCartStore();
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
         fetchCart()
     }, []);

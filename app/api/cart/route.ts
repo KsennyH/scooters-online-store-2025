@@ -56,6 +56,7 @@ export async function POST (req: NextRequest) {
             },
         });
 
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         let updatedItem;
 
         if (existingItem) {

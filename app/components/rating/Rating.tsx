@@ -14,7 +14,7 @@ export const Rating = ({rating, ...props}: RatingProps): JSX.Element => {
 
     const calculateRating = (currentRating: number) => {
         const updatedArrayStars = new Array(5).fill(<></>).map((_, i: number ) => {
-            return <RatingStarSmall className={cn(styles.star, {
+            return <RatingStarSmall key={i} className={cn(styles.star, {
                 [styles.filled]: i < currentRating
             })} />
         });

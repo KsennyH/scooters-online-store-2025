@@ -62,7 +62,7 @@ export const SearchForm = (): JSX.Element => {
                     {loading && <div>Загрузка...</div>}
                     {error && <div>{error}</div>}
                     {
-                        productsResult.map((product, i:number) => (
+                        productsResult.map((product) => (
                             <Link className={styles.searchLink} key={product.id} href={`/category/${product.category.slug}/${product.slug}`} onClick={onClickItem}>
                                 <Image src={product.imageUrl} alt={product.name} width={50} height={50}/>
                                 <Title level="h4">{product.name}</Title>

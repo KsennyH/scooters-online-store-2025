@@ -4,6 +4,7 @@ import { ErrorText } from "../error-text/ErrorText"
 import { JSX } from "react"
 import styles from "./AddressInput.module.css"
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const AddressInput = ({control}:any): JSX.Element => {
     return(
         <Controller

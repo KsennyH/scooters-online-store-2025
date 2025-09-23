@@ -12,7 +12,7 @@ import { ProductWithCategory } from "@/services/products";
 import { Spinner } from "../spinner/Spinner";
 import { Price } from "../price/Price";
 import { useAddToCart } from "@/app/hooks/useAddToCart";
-export const ProductCard = ({ id, category, slug, imageUrl, name, isNew, price, inStock }: ProductWithCategory):JSX.Element => {
+export const ProductCard = ({ id, category, slug, imageUrl, name, isNew, price }: ProductWithCategory):JSX.Element => {
 
     const { addToCart, localLoading } = useAddToCart(name);
 

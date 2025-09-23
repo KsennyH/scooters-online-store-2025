@@ -3,7 +3,7 @@ import { JSX } from "react";
 import { BreadcrumbsProps } from "./BreadcrumbsProps";
 import styles from './Breadcrumbs.module.css';
 
-export const Breadcrumbs = ({activeProduct, breadcrumbs, className, ...props}: BreadcrumbsProps): JSX.Element => {
+export const Breadcrumbs = ({activeProduct, breadcrumbs}: BreadcrumbsProps): JSX.Element => {
     return (
         <div className={styles.breadcrumbs}>
             <nav>

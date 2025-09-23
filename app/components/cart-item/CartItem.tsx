@@ -15,7 +15,6 @@ export const CartItem = ({ product }: CartItemProps): JSX.Element => {
 
     const originPrice = product.price * quantity;
     const discountPrice = originPrice - (originPrice * product.discount / 100);
-    const totalProductPrice = product.discount ? discountPrice : originPrice;
     const { removeProduct } = useCartStore();
 
     return(

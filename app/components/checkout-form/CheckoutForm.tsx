@@ -25,7 +25,8 @@ export type InputsData = {
 
 export const CheckoutForm = (): JSX.Element => {
     const {items, totalAmount, loading, fetchCart} = useCartStore();
-        
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps        
     useEffect(() => {
         fetchCart()
     }, []);
@@ -33,6 +34,7 @@ export const CheckoutForm = (): JSX.Element => {
     const { control, reset, handleSubmit, register,  formState: { errors }, } = useForm<InputsData>({
         mode: "onBlur"
     });
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const onSubmit: SubmitHandler<InputsData> = async (data) => {
         try {
             const url = await makeOrder(data);
