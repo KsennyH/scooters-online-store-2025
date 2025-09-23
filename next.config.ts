@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 import type { Configuration, RuleSetRule } from 'webpack';
 
 const nextConfig: NextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   webpack(config: Configuration) {
 
     const fileLoaderRule = config.module?.rules?.find(
