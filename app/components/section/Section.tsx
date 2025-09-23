@@ -2,7 +2,7 @@ import { JSX } from "react";
 import styles from "./Section.module.css";
 import { SectionProps } from "./SectionProps";
 import { Title } from "../title/Title";
-import cn from "classNames";
+import cn from "classnames";
 
 export const Section = ({title, level='h1', children, className, ...props}: SectionProps): JSX.Element => {
     return(

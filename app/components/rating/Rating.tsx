@@ -2,7 +2,7 @@
 import { JSX, useEffect, useState } from "react";
 import RatingStarSmall from './RatingStarSmall.svg';
 import styles from './Rating.module.css';
-import cn from 'classNames';
+import cn from 'classnames';
 import { RatingProps } from "./RatingProps";
 
 export const Rating = ({rating, ...props}: RatingProps): JSX.Element => {

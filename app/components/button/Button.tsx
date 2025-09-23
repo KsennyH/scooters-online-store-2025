@@ -1,7 +1,7 @@
 import { JSX } from "react";
 import { ButtonProps } from "./ButtonProps";
 import styles from './Button.module.css';
-import cn from "classNames";
+import cn from "classnames";
 
 
 

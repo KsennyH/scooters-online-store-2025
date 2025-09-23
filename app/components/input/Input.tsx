@@ -1,7 +1,7 @@
 import { JSX } from "react";
 import styles from "./../checkout-form/CheckoutForm.module.css";
 import { ErrorText } from "../error-text/ErrorText";
-import cn from "classNames";
+import cn from "classnames";
 import { InputProps } from "./InputProps";
 
 export const Input = ({className, error, ...props}:InputProps): JSX.Element => {

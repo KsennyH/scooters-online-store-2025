@@ -2,7 +2,7 @@ import { JSX } from "react";
 import styles from "./InStock.module.css";
 import Image from "next/image";
 import { inStockProps } from "./InStockProps";
-import cn from "classNames";
+import cn from "classnames";
 
 export const InStock = ({stock, ...props}: inStockProps): JSX.Element => {
     return(
