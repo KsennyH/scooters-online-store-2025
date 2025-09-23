@@ -1,0 +1,7 @@
+.cartPrice {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+    padding: 24px 0;
+}

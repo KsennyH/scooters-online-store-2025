@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    height: 100%;
     position: relative;
     cursor: pointer;
     background-color: var(--white);
@@ -20,14 +21,6 @@
     stroke: var(--primary);
 }
 
-.icons {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    gap: 6px;
-}
-
 .cardImage {
     position: relative;
     width: 100%;
@@ -39,19 +32,14 @@
 }
 
 .cardTitle {
-        text-align: center;
-    }
-
-.reviews {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    text-align: center;
 }
 
-.reviewText {
-    color: var(--text);
-    font-size: 12px;
-    font-weight: 600;
+.icons {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    gap: 4px;
 }
 
 .priceWrapper {
@@ -60,14 +48,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 24px;
-}
-
-.price {
-    font-weight: 700;
-}
-
-.priceSymbol {
-    margin-left: 5px;
+    margin-top: auto;
 }
 
 .new {

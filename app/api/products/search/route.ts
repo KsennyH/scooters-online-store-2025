@@ -11,8 +11,11 @@ export async function GET(req: NextRequest) {
         where: {
             name: {
                 contains: query,
-                mode: 'insensitive'
+                mode: 'insensitive',
             }
+        },
+        include: {
+            category: true
         }
     })
 

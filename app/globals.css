@@ -1,11 +1,13 @@
 :root {
   --primary: #00C853;
   --secondary: #1E2A38;
+  --activeLink: #01579B;
   --disabled: #D3D3D3;
   --background: #F5F5F5;
   --text: #7A7A7A;
   --white: #fff;
   --black: #000;
+  --step: 4px;
 }
 
 * {
@@ -67,6 +69,9 @@ button {
 img {
     max-width: 100%;
 }
+.height100 {
+    height: 100%;
+}
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -110,9 +115,9 @@ img {
 }
 .container-small {
   max-width: 1274px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 12px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 12px;
 }
 .col-12 {
     flex: 0 0 auto;
@@ -162,6 +167,67 @@ img {
   flex: 0 0 auto;
   width: 8.33333333%;
 }
+.mb2 {
+    margin-bottom: calc(var(--step) * 2);
+}
+.mb3 {
+    margin-bottom: calc(var(--step) * 3);
+}
+.mb4 {
+    margin-bottom: calc(var(--step) * 4);
+}
+.mb5 {
+    margin-bottom: calc(var(--step) * 5);
+}
+.mb6 {
+    margin-bottom: calc(var(--step) * 6);
+}
+.mb8 {
+    margin-bottom: calc(var(--step) * 8);
+}
+.mb10 {
+    margin-bottom: calc(var(--step) * 10);
+}
+.mb20 {
+    margin-bottom: calc(var(--step) * 20);
+}
+
+.mt2 {
+    margin-top: calc(var(--step) * 2);
+}
+.mt3 {
+    margin-top: calc(var(--step) * 3);
+}
+.mt4 {
+    margin-top: calc(var(--step) * 4);
+}
+.mt5 {
+    margin-top: calc(var(--step) * 5);
+}
+.mt6 {
+    margin-top: calc(var(--step) * 6);
+}
+.mt8 {
+    margin-top: calc(var(--step) * 8);
+}
+.mt10 {
+    margin-top: calc(var(--step) * 10);
+}
+.mt20 {
+    margin-top: calc(var(--step) * 20);
+}
+.section {
+  margin: 48px 0;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+}
+
+.relative {
+  position: relative;
+}
+
 @media (max-width: 1540px) {
     .col-lg-1 {
     flex: 0 0 auto;

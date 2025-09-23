@@ -9,6 +9,21 @@
     justify-self: end;
     column-gap: 24px;
 }
+.counter {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 12px;
+    padding: 10px;
+}
 .phone {
     white-space: nowrap;
 }
@@ -21,4 +36,19 @@
     display: flex;
     align-items: center;
     column-gap: 12px;
+}
+
+@media (max-width: 767px) {
+    .searchForm {
+        order: 2;
+    }
+}
+
+@media (max-width: 500px) {
+    .logo {
+        text-align: center;
+    }
+    .actions {
+        justify-self: center;
+    }
 }

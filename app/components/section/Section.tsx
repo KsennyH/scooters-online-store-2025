@@ -2,12 +2,13 @@ import { JSX } from "react";
 import styles from "./Section.module.css";
 import { SectionProps } from "./SectionProps";
 import { Title } from "../title/Title";
+import cn from "classNames";
 
-export const Section = ({title, children}: SectionProps): JSX.Element => {
+export const Section = ({title, level='h1', children, className, ...props}: SectionProps): JSX.Element => {
     return(
-        <section className={styles.section}>
+        <section className={cn(styles.section, className)} {...props}>
             <div className="container">
-                <Title level="h2" className={styles.sectionTitle}>{title}</Title>
+                <Title level={level} className={styles.sectionTitle}>{title}</Title>
             </div>
             {children}
         </section>

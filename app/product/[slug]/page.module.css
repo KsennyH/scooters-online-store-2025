@@ -1,0 +1,35 @@
+.new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 70px;
+    font-size: 14px;
+    border-radius: 10px;
+    height: 24px;
+    background-color: #E93232;
+    color: var(--white);
+    margin-bottom: 24px;
+}
+.stock {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+.descr {
+    padding: 48px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}

@@ -5,16 +5,18 @@ import Image from "next/image";
 import styles from "./SearchForm.module.css";
 import { Button } from "../button/Button";
 import { Api } from "@/services/api-client";
-import { Product } from "@prisma/client";
 import Link from "next/link";
 import { Title } from "../title/Title";
 import { useClickAway, useDebounce } from "react-use";
+import { ProductWithCategory } from "@/services/products";
 
 export const SearchForm = (): JSX.Element => {
 
     const [focused, setFocused] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
-    const [productsResult, setProductsResult] = useState<Product[]>([]);
+    const [productsResult, setProductsResult] = useState<ProductWithCategory[]>([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
     const ref = useRef(null);
 
     useClickAway(ref, () => {
@@ -24,9 +26,17 @@ export const SearchForm = (): JSX.Element => {
     useDebounce(() => {
         if(searchQuery.trim().length === 0) {
             setProductsResult([]);
+            setError(null);
             return;
         }
-        Api.products.search(searchQuery.trim()).then(products => setProductsResult(products));
+
+        setLoading(true);
+        setError(null);
+        
+        Api.products.search(searchQuery.trim())
+            .then(products => setProductsResult(products))
+            .catch(() => setError('Search error'))
+            .finally(() => setLoading(false));
     }, 300, [searchQuery]);
 
     const onClickItem = () => {
@@ -39,7 +49,7 @@ export const SearchForm = (): JSX.Element => {
         <div className={styles.formWrapper}>
             <form className={styles.form} ref={ref}>
                 <input value={searchQuery} onFocus={() => setFocused(true)} onChange={(e) => setSearchQuery(e.target.value)} className={styles.input} type="text" placeholder="Поиск" />
-                <Button className={styles.searchButton} view="secondary" icon={true} type="submit">
+                <Button className={styles.searchButton} view="secondary" icon={true} type="button">
                     <Image src="/Search.svg"
                         alt="Поиск"
                         width={24}
@@ -49,9 +59,11 @@ export const SearchForm = (): JSX.Element => {
             </form>
             { productsResult.length > 0 && (
                 <div className={`${styles.searchResult} ${focused ? styles.open : ''}`}>
+                    {loading && <div>Загрузка...</div>}
+                    {error && <div>{error}</div>}
                     {
                         productsResult.map((product, i:number) => (
-                            <Link className={styles.searchLink} key={product.id} href={`/products/${product.id}`} onClick={onClickItem}>
+                            <Link className={styles.searchLink} key={product.id} href={`/category/${product.category.slug}/${product.slug}`} onClick={onClickItem}>
                                 <Image src={product.imageUrl} alt={product.name} width={50} height={50}/>
                                 <Title level="h4">{product.name}</Title>
                             </Link>

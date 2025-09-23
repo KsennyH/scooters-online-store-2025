@@ -4,6 +4,8 @@ import "./globals.css";
 import 'react-loading-skeleton/dist/skeleton.css';
 import { Header } from "./components/header/Header";
 import { Footer } from "./components/footer/Footer";
+import { Toaster } from "react-hot-toast";
+import { CartLoading } from "./components/cart-loading/CartLoading";
 
 const inter = Inter({
   subsets: ['latin', 'cyrillic'],
@@ -32,9 +34,13 @@ export default function RootLayout({
     <html lang="ru">
       <body className={`${inter.variable} ${montserrat.variable}`}>
         <div className="wrapper">
-          <Header />
-          {children}
-          <Footer />
+            <Header />
+            <main className="main">
+              <Toaster />
+              <CartLoading />
+              {children}
+            </main>
+            <Footer />
         </div>
       </body>
     </html>

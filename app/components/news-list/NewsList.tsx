@@ -1,7 +1,6 @@
 'use client'
 
 import { JSX, useEffect, useState } from "react";
-import styles from "./NewsList.module.css";
 import { NewsCard } from "../news-card/NewsCard";
 import { Api } from "@/services/api-client";
 import { News } from "@prisma/client";
@@ -20,7 +19,10 @@ export const NewsList = ():JSX.Element => {
         {
             newsArray.length === 0 ? [...Array(4)].map((_, i) => (
           <li className="col-3 col-md-4 col-sm-6 col-full-12" key={i}>
-            <NewsCardSkeleton />
+            <div className="container">
+                <NewsCardSkeleton />
+            </div>
+            
           </li>
         )) :
             newsArray.map((obj) => (

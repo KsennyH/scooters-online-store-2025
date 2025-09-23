@@ -1,0 +1,11 @@
+.order{
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(50, 50, 71, 0.14);
+    border-radius: 10px;
+    padding: 16px;
+}
+.orderProducts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

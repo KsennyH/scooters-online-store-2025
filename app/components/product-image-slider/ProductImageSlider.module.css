@@ -1,0 +1,9 @@
+.sliderImages {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.sliderBorder {
+    border: 2px solid var(--activeLink);
+}

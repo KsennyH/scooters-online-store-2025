@@ -1,0 +1,11 @@
+.reviews {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.reviewText {
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 600;
+}

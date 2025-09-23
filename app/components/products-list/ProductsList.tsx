@@ -1,16 +1,16 @@
 "use client"
 import { JSX, useEffect, useState } from "react";
 import { ProductCard } from "../product-card/ProductCard";
-import { Product } from "@prisma/client";
 import { Api } from "@/services/api-client";
 import { ProductCardSkeleton } from "../product-card/ProductCardSkeleton";
+import { ProductWithCategory } from "@/services/products";
 
 export const ProductsList = (): JSX.Element => {
 
-    const [mainProducts, setMainProducts] = useState<Product[]>([]);
+    const [mainProducts, setMainProducts] = useState<ProductWithCategory[]>([]);
 
     useEffect(() => {
-        Api.products.mainProducts().then(products => setMainProducts(products))
+        Api.products.getMainProducts().then(setMainProducts)
     }, []);
 
     return(
@@ -18,13 +18,16 @@ export const ProductsList = (): JSX.Element => {
             {
                 mainProducts.length === 0 ? [...Array(4)].map((_, i) => (
                           <li className="col-lg-3 col-md-4 col-sm-6 col-full-12" key={i}>
-                            <ProductCardSkeleton />
+                            <div className="container">
+                                <ProductCardSkeleton />
+                            </div>
+                            
                           </li>
                         )) :
                 mainProducts.map((obj) => 
                     (
-                        <li className="col-lg-3 col-md-4 col-sm-6 col-full-12" key={obj.id}>
-                            <div className="container">
+                        <li className="col-3 col-md-4 col-sm-6 col-full-12" key={obj.id}>
+                            <div className="container height100">
                                 <ProductCard {...obj} />
                             </div>
                         </li>

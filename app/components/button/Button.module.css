@@ -17,13 +17,20 @@
 .primary:hover {
     background-color: #0bdf63;
 }
-
+.primary:disabled {
+    opacity: 0.5;
+    cursor: auto;
+}
 .secondary {
     background-color: var(--secondary);
 }
 
 .secondary:hover {
     background-color: #465970;
+}
+.secondary:disabled {
+    background-color: #465970;
+    cursor: auto;
 }
 .icon {
     display: inline-flex;
