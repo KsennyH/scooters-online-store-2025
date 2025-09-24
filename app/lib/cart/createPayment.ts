@@ -5,6 +5,7 @@ export async function createPayment({amount, orderId, description}: {amount: num
         throw new Error('Не указан ключ YOOKASSA_SECRET_KEY');
     }
 
+    const returnUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000/';
     const { data } = await axios.post(
         'https://api.yookassa.ru/v3/payments',
         {
@@ -19,7 +20,7 @@ export async function createPayment({amount, orderId, description}: {amount: num
             },
             confirmation: {
                 type: 'redirect',
-                return_url: 'http://localhost:3000/',
+                return_url: returnUrl,
             },
         },
         {
