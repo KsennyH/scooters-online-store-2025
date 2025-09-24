@@ -34,23 +34,26 @@ export default async function ProductsPage({ params }: { params: Promise<{ categ
                 </div>
             </div>
 
-            <div className={`${styles.descr} row`}>
-                <div className="col-6">
-                    <div className="container">
-                        <ProductImageSlider images={product.images} />
+            <div className={styles.descr}>
+                <div className="row">
+                    <div className="col-6">
+                        <div className="container">
+                            <ProductImageSlider images={product.images} />
+                        </div>
                     </div>
-                </div>
-                <div className="col-6">
-                    <div className="container">
-                        <ProductInfo id={product.id} name={product.name} price={product.price} inStock={product.inStock}/>
+                    <div className="col-6">
+                        <div className="container">
+                            <ProductInfo id={product.id} name={product.name} price={product.price} inStock={product.inStock}/>
+                        </div>
+                        
                     </div>
+                    <Section title="Описание" level="h2" className={styles.descr}>
+                        <div className="container">{product.description}</div>
+                    </Section>
                     
                 </div>
-                <Section title="Описание" level="h2" className={styles.descr}>
-                    <div className="container">{product.description}</div>
-                </Section>
-                
             </div>
+            
         </section>
     );
 }
