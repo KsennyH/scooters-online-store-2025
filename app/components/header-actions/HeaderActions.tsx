@@ -19,7 +19,7 @@ export const HeaderActions = (): JSX.Element => {
                 <div className="col-4 col-md-3 col-sm-6 col-full-12">
                     <div className="container">
                         <div className={styles.logo}>
-                            <Image src='/Scooters-logo.png' alt="Scooters logo" width={100} height={100} />
+                            <Image src='/scooters-logo.png' alt="Scooters logo" width={100} height={100} />
                         </div>
                     </div>
                 </div>
